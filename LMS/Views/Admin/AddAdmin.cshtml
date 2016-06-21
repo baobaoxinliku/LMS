@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+@section TitleSection{
+    AddAdmin
+}
+@section HeaderSection{
+
+}
+@section ContentBody{
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a href="index.html" title="返回首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
+            <a href="yonghu.html" class="current">添加用户</a>
+        </div>
+        <h1>添加用户</h1>
+    </div>
+    <div class="container-fluid">
+        <hr>
+        <div class="row-fluid">
+            <div class="span6">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon"> <i class="icon-align-justify"></i> </span>
+                        <h5>添加信息</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form action="#" method="get" class="form-horizontal">
+                            <div class="control-group">
+                                <label class="control-label">姓名 :</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" placeholder="请输入姓名" name="AdminName"/>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">账号 :</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" placeholder="请输入账号" name="AdminAccount" />
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">密码 :</label>
+                                <div class="controls">
+                                    <input type="password" class="span11" placeholder="请输入密码" name="AdminPwd" />
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">电话 :</label>
+                                <div class="controls">
+                                    <input type="text" class="span11" placeholder="请输入电话号码" name="AdminTel"/>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label">简介 :</label>
+                                <div class="controls">
+                                    <textarea class="span11" name="AdminIntro"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-success">保存</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
