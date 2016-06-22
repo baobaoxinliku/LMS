@@ -92,6 +92,7 @@
       <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -228,12 +229,19 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CarController.cs" />
     <Compile Include="DAL\AccountContext.cs" />
     <Compile Include="DAL\AccountInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\Class.cs" />
+    <Compile Include="Models\F_Customer.cs" />
+    <Compile Include="Models\Line.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\S_Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AccountListViewModel.cs" />
     <Compile Include="ViewModels\IndexViewModel.cs" />
@@ -252,7 +260,7 @@
     <Content Include="font-awesome\font\fontawesome-webfont.ttf" />
     <Content Include="font-awesome\font\fontawesome-webfont.woff" />
     <Content Include="font-awesome\css\Descr.WD3" />
-    <Content Include="Views\Admin\AddAdmin.cshtml" />
+    <Content Include="Views\Admin\AdminAdd.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="img\demo\Descr.WD3" />
     <Content Include="img\Descr.WD3" />
@@ -264,12 +272,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Admin\Login.cshtml" />
-    <Content Include="Views\Admin\Car.cshtml" />
     <Content Include="Views\Admin\Line.cshtml" />
     <Content Include="Views\Admin\AdminDetail.cshtml" />
     <Content Include="Views\Admin\AdminList.cshtml" />
     <Content Include="Views\Admin\AdminEdit.cshtml" />
     <Content Include="Views\Admin\AdminDelete.cshtml" />
+    <Content Include="Views\Car\CarList.cshtml" />
+    <Content Include="Views\Car\CarDetail.cshtml" />
+    <Content Include="Views\Car\CarDelete.cshtml" />
+    <Content Include="Views\Car\CarIndex.cshtml" />
+    <Content Include="Views\Car\CarEdit.cshtml" />
+    <Content Include="Views\Car\CarAdd.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -279,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,59 @@
+﻿@model LMS.Models.Car
+@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+@section TitleSection{
+    AddDEdit
+}
+@section HeaderSection{
+
+}
+@section ContentBody{
+    <div id="sidebar">
+        <ul>
+            <li><a href="Index"><i class="icon icon-home"></i>首页</a></li>
+            <li><a href="#">订单管理</a></li>
+            <li><a href="#">线路详情</a></li>
+            <li><a href="#">车辆情况</a></li>
+            <li class="active"><a href="#">用户管理</a></li>
+            <li><a href="Login">退出</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="content-header">
+            <div id="breadcrumb">
+                <a href="Index" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>
+                <a href="#">用户管理</a>
+                <a href="AdminList" class="current">用户列表</a>
+            </div>
+            <h1>用户列表</h1><hr />
+        </div>
+        <div class="container">
+            <h2>编辑</h2>
+            @using (Html.BeginForm())
+            {
+                @Html.HiddenFor(model => model.CarID)
+                <dl>
+                    <dt>车辆编号：</dt>
+                    <dd>@Html.DisplayFor(model => model.CarID)</dd>
+
+                    <dt><br />车牌号：</dt>
+                    <dd>@Html.EditorFor(model => model.CarNo)</dd>
+
+                    <dt><br />驾驶员：</dt>
+                    <dd>@Html.EditorFor(model => model.CarDiver)</dd>
+
+                    <dt><br />车辆路线：</dt>
+                    <dd>@Html.EditorFor(model => model.CarAddress)</dd>
+
+                    <dt><br />车辆类型：</dt>
+                    <dd>@Html.EditorFor(model => model.CarType)</dd>
+                </dl>
+                <div>
+                    <input type="submit" value="保存" class="btn btn-default" />@Html.ActionLink("返回首页", "CarList")
+                </div>
+            }
+        </div>
+    </div>
+}
+

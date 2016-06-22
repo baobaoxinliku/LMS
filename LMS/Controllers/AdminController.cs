@@ -18,16 +18,16 @@ namespace LMS.Controllers
             return View();
         }
 
-        public ActionResult AddAdmin()
+        public ActionResult AdminAdd()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult AddAdmin(Models.Admin admin)
+        public ActionResult AdminAdd(Models.Admin admin)
         {
             db.Admins.Add(admin);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("AdminList");
         }
 
         public ActionResult Login()
@@ -63,6 +63,7 @@ namespace LMS.Controllers
         }
 
         //用户列表
+        //[Authorize]
         public ActionResult AdminList(string Search)
         {
             List<Models.Admin> Admins;
