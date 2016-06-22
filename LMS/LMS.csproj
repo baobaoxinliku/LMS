@@ -150,15 +150,50 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\uniform.css" />
     <Content Include="font-awesome\css\font-awesome.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\a.jpg" />
+    <Content Include="img\alpha.html" />
+    <Content Include="img\breadcrumb.png" />
+    <Content Include="img\demo\av1.jpg" />
+    <Content Include="img\demo\av2.jpg" />
+    <Content Include="img\demo\av3.jpg" />
+    <Content Include="img\demo\av4.jpg" />
+    <Content Include="img\demo\av5.jpg" />
+    <Content Include="img\demo\demo-image1.jpg" />
+    <Content Include="img\demo\demo-image2.jpg" />
+    <Content Include="img\demo\demo-image3.jpg" />
+    <Content Include="img\demo\envelope.png" />
+    <Content Include="img\gallery\imgbox1.jpg" />
+    <Content Include="img\gallery\imgbox2.jpg" />
+    <Content Include="img\gallery\imgbox3.jpg" />
+    <Content Include="img\gallery\imgbox4.jpg" />
+    <Content Include="img\gallery\imgbox5.jpg" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.html" />
+    <Content Include="img\gritter.png" />
+    <Content Include="img\hue.png" />
+    <Content Include="img\larrow.png" />
+    <Content Include="img\line.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\menu-active.png" />
+    <Content Include="img\rarrow.png" />
+    <Content Include="img\saturation.png" />
+    <Content Include="img\select2.png" />
+    <Content Include="img\spinner.gif" />
+    <Content Include="img\sprite.png" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap-colorpicker.js" />
     <Content Include="scripts\bootstrap-datepicker.js" />
     <Content Include="scripts\bootstrap-wysihtml5.js" />
+    <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\excanvas.min.js" />
     <Content Include="scripts\fullcalendar.min.js" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery.dataTables.min.js" />
     <Content Include="scripts\jquery.flot.min.js" />
     <Content Include="scripts\jquery.flot.pie.min.js" />
@@ -185,6 +220,7 @@
     <Content Include="scripts\matrix.popover.js" />
     <Content Include="scripts\matrix.tables.js" />
     <Content Include="scripts\matrix.wizard.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="scripts\select2.min.js" />
     <Content Include="scripts\wysihtml5-0.3.0.js" />
     <Content Include="Web.config" />
@@ -199,6 +235,7 @@
     </Compile>
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AccountListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -217,6 +254,16 @@
     <Content Include="font-awesome\css\Descr.WD3" />
     <Content Include="Views\Admin\AddAdmin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="img\demo\Descr.WD3" />
+    <Content Include="img\Descr.WD3" />
+    <Content Include="img\gallery\Descr.WD3" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Admin\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
