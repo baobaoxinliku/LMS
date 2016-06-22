@@ -13,6 +13,12 @@
     <link href="~/Content/a.css" rel="stylesheet" />
     <link href="~/font-awesome/css/font-awesome.css" rel="stylesheet" />
 
+    <style type="text/css">
+        .wid {
+            width:1500px;
+        }
+    </style>
+
     <title>@RenderSection("TitleSection")</title>
     @RenderSection("HeaderSection")
 </head>
@@ -26,17 +32,49 @@
     <div id="user-nav" class="navbar navbar-inverse">
         <ul class="nav">
             <li class="dropdown" id="profile-messages">
-                <a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
+                <a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i><span class="text">Welcome Admin</span><b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#"><i class="icon-user"></i> 我的信息</a></li>
+                    <li><a href="#"><i class="icon-user"></i>我的信息</a></li>
                 </ul>
             </li>
-            <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+            <li class=""><a title="" href="~/Admin/Login"><i class="icon icon-share-alt"></i><span class="text">退出</span></a></li>
         </ul>
     </div>
     <!--close-top-Header-menu-->
     <!--sidebar-menu-->
-    <div>
+    <div id="sidebar">
+        <a href="#" class="visible-phone"><i class="icon icon-signal"></i>订单管理</a>
+        <ul>
+            <li><a href="~/Admin/Index"><i class="icon icon-home"></i>首页</a></li>
+            <li><a href="#">订单管理</a></li>
+            <li><a href="#">线路详情</a></li>
+            <li class="submenu">
+                <a href="#">车辆情况<span class="label label-important">2</span></a>
+                <ul>
+                    <li><a href="~/Car/CarAdd">添加车辆</a></li>
+                    <li><a href="~/Car/CarList">车辆列表</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#">客户管理<span class="label label-important">4</span></a>
+                <ul>
+                    <li><a href="~/SCustomer/SCustomerList">收货人列表</a></li>
+                    <li><a href="~/SCustomer/SCustomerAdd">添加收货人</a></li>
+                    <li><a href="~/FCustomer/FCustomerList">发货人列表</a></li>
+                    <li><a href="~/FCustomer/FCustomerAdd">添加发货人</a></li>
+                </ul>
+            </li>
+            <li class="submenu">
+                <a href="#">用户管理<span class="label label-important">2</span></a>
+                <ul>
+                    <li><a href="~/Admin/AdminAdd">添加用户</a></li>
+                    <li><a href="~/Admin/AdminList">用户列表</a></li>
+                </ul>
+            </li>
+            <li><a href="~/Admin/Login">退出</a></li>
+        </ul>
+    </div>
+    <div class="wid">
         @RenderSection("ContentBody")
     </div>
     

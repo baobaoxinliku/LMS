@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
@@ -78,6 +80,15 @@ namespace LMS.Controllers
             ViewModels.AccountListViewModel aLVM = new ViewModels.AccountListViewModel();
             aLVM.Admin = Admins;
             return View(aLVM);
+        }
+        public ActionResult AdminList1(int? page)
+        {
+            var acc = db.Admins;
+            int pageNumber = page ?? 1;
+            int pageSize = int.Parse(ConfigurationManager.AppSettings["pageSize"]);
+            var acc1 = acc.OrderBy(x => x.AdminName);
+            IPagedList<Models.Admin> pageList = acc1.ToPagedList(pageNumber, pageSize);
+            return View(pageList);
         }
 
         //用户详情

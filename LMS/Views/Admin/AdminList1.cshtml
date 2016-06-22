@@ -1,4 +1,5 @@
-﻿@model LMS.ViewModels.AccountListViewModel
+﻿@model PagedList.IPagedList<LMS.Models.Admin>
+@using PagedList.Mvc
 @{
     Layout = "~/Views/Shared/MyLayout.cshtml";
 }
@@ -6,31 +7,19 @@
     AdminList
 }
 @section HeaderSection{
-    
+
 }
 @section ContentBody{
-<div id="content">
-    <div id="content-header">
-        <div id="breadcrumb">
-            <a href="Index" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>
-            <a href="#">用户管理</a>
-            <a href="AdminList" class="current">用户列表</a>
-        </div>
-        <h1>用户列表</h1><hr />
-    </div>
-    <div class="container">
-        @using (Html.BeginForm())
-        {
-            <p>
-                请输入您要搜索的姓名 ： @Html.TextBox("Search")
-                <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
-            </p>
-        }
-        <div class="widget-box">
-            <div class="widget-title">
-                <span class="icon"><i class="icon-th"></i></span>
-                <h5>用户列表</h5>
+    <div id="content">
+        <div id="content-header">
+            <div id="breadcrumb">
+                <a href="Index" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>
+                <a href="#">用户管理</a>
+                <a href="AdminList" class="current">用户列表</a>
             </div>
+            <h1>用户列表</h1><hr />
+        </div>
+        <div class="container">
             <div class="widget-content nopadding">
                 <table class="table table-bordered data-table">
                     <thead>
@@ -45,7 +34,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (LMS.Models.Admin item in Model.Admin)
+                        @foreach (LMS.Models.Admin item in Model)
                         {
                             <tr>
                                 <td>@item.AdminNo</td>
@@ -55,12 +44,15 @@
                                 <td>@Html.ActionLink("详情", "AdminDetail", new { id = item.AdminNo })</td>
                                 <td>@Html.ActionLink("编辑", "AdminEdit", new { id = item.AdminNo })</td>
                                 <td>@Html.ActionLink("删除", "AdminDelete", new { id = item.AdminNo })</td>
-                            </tr>
+                             </tr>
                         }
                     </tbody>
                 </table>
+                <div>
+                    每页 @Model.PageSize 条记录，共 @Model.PageCount 页，当前第 @Model.PageNumber 页
+                    @Html.PagedListPager(Model, page => Url.Action("IndexUser1", new { page }))
+                </div>
             </div>
-        </div>
         </div>
     </div>
 }

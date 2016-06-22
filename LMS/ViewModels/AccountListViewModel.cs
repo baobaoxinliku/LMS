@@ -19,6 +19,6 @@ namespace LMS.ViewModels
 
         //public List<Models.Order> Order { get; set; }
 
-        public List<Models.S_Customer> S_Customer { get; set; }
+        public List<Models.SCustomer> SCustomer { get; set; }
     }
 }

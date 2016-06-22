@@ -1,9 +1,10 @@
-﻿@model LMS.ViewModels.AccountListViewModel
+﻿@model PagedList.IPagedList<LMS.Models.SCustomer>
+@using PagedList.Mvc
 @{
     Layout = "~/Views/Shared/MyLayout.cshtml";
 }
 @section TitleSection{
-    FCustomerList
+    SCustomerList
 }
 @section HeaderSection{
 
@@ -14,7 +15,7 @@
             <div id="breadcrumb">
                 <a href="#" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>
                 <a href="#">客户情况</a>
-                <a href="#">发货人信息</a>
+                <a href="#">收货人信息</a>
                 <a href="#" class="current">发货人列表</a>
             </div>
             <h1>用户列表</h1><hr />
@@ -30,35 +31,40 @@
             <div class="widget-box">
                 <div class="widget-title">
                     <span class="icon"><i class="icon-th"></i></span>
-                    <h5>发货人信息表</h5>
+                    <h5>收货人信息表</h5>
                 </div>
                 <div class="widget-content nopadding">
                     <table class="table table-bordered data-table">
                         <thead>
                             <tr>
-                                <th>发货人编号</th>
-                                <th>发货人姓名</th>
-                                <th>发货人电话</th>
+                                <th>收货人编号</th>
+                                <th>收货人姓名</th>
+                                <th>收货人电话</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (LMS.Models.FCustomer item in Model.FCustomer)
-                    {
-                    <tr>
-                        <td>@item.FCustoID</td>
-                        <td>@item.FCustoName</td>
-                        <td>@item.FCustoTel</td>
-                        <td>@Html.ActionLink("详情", "FCustomerDetail", new { id = item.FCustoID })</td>
-                        <td>@Html.ActionLink("编辑", "FCustomerEdit", new { id = item.FCustoID })</td>
-                        <td>@Html.ActionLink("删除", "FCustomerDelete", new { id = item.FCustoID })</td>
-                    </tr>
-                    }
+                            @foreach (LMS.Models.SCustomer item in Model)
+                            {
+                                <tr>
+                                    <td>@item.SCustoID</td>
+                                    <td>@item.SCustoName</td>
+                                    <td>@item.SCustoTel</td>
+                                    <td>@Html.ActionLink("详情", "SCustomerDetail", new { id = item.SCustoID })</td>
+                                    <td>@Html.ActionLink("编辑", "SCustomerEdit", new { id = item.SCustoID })</td>
+                                    <td>@Html.ActionLink("删除", "SCustomerDelete", new { id = item.SCustoID })</td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
+                    <div>
+                        每页 @Model.PageSize 条记录，共 @Model.PageCount 页，当前第 @Model.PageNumber 页
+                        @Html.PagedListPager(Model, page => Url.Action("IndexUser1", new { page }))
+                    </div>
                 </div>
             </div>
-            </div></div>
-    }
+        </div>
+    </div>
+}

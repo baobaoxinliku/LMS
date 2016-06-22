@@ -231,6 +231,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\FCustomerController.cs" />
+    <Compile Include="Controllers\SCustomerController.cs" />
     <Compile Include="DAL\AccountContext.cs" />
     <Compile Include="DAL\AccountInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -242,7 +243,7 @@
     <Compile Include="Models\FCustomer.cs" />
     <Compile Include="Models\Line.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\S_Customer.cs" />
+    <Compile Include="Models\SCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AccountListViewModel.cs" />
     <Compile Include="ViewModels\IndexViewModel.cs" />
@@ -262,7 +263,6 @@
     <Content Include="font-awesome\font\fontawesome-webfont.woff" />
     <Content Include="font-awesome\css\Descr.WD3" />
     <Content Include="Views\Admin\AdminAdd.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="img\demo\Descr.WD3" />
     <Content Include="img\Descr.WD3" />
     <Content Include="img\gallery\Descr.WD3" />
@@ -290,6 +290,17 @@
     <Content Include="Views\FCustomer\FCustomerDetail.cshtml" />
     <Content Include="Views\FCustomer\FCustomerDelete.cshtml" />
     <Content Include="Views\FCustomer\FCustomerEdit.cshtml" />
+    <Content Include="Views\SCustomer\SCustomerIndex.cshtml" />
+    <Content Include="Views\SCustomer\SCustomerAdd.cshtml" />
+    <Content Include="Views\SCustomer\SCustomerList.cshtml" />
+    <Content Include="Views\SCustomer\SCustomerDetail.cshtml" />
+    <Content Include="Views\SCustomer\SCustomerDelete.cshtml" />
+    <Content Include="Views\SCustomer\SCustomerEdit.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\AdminList1.cshtml" />
+    <Content Include="Views\Car\CarList1.cshtml" />
+    <Content Include="Views\SCustomer\SCustomerList1.cshtml" />
+    <Content Include="Views\FCustomer\FCustomerList1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

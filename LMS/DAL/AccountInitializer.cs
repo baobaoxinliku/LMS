@@ -76,17 +76,17 @@ namespace LMS.DAL
             //context.SaveChanges();
 
             //收货人
-            //var S_Customers = new List<Models.S_Customer>
-            //{
-            //    //INSERT[S_Customer]([S_CustoNo],[S_CustoTel],[S_CustoName])
-            //    new Models.S_Customer { S_CustoTel="13548956482",S_CustoName="楚可" },
-            //    new Models.S_Customer { S_CustoTel="48954189153",S_CustoName="泥马" },
-            //    new Models.S_Customer { S_CustoTel="18945984563",S_CustoName="啊三" },
-            //    new Models.S_Customer { S_CustoTel="48956845951",S_CustoName="阿不" },
-            //    new Models.S_Customer { S_CustoTel="48945674263",S_CustoName="鸡汁" }
-            //};
-            //S_Customers.ForEach(s => context.S_Customers.Add(s));
-            //context.SaveChanges();
+            var SCustomers = new List<Models.SCustomer>
+            {
+                //INSERT[S_Customer]([S_CustoNo],[S_CustoTel],[S_CustoName])
+                new Models.SCustomer { SCustoTel="13548956482",SCustoName="楚可" },
+                new Models.SCustomer { SCustoTel="48954189153",SCustoName="泥马" },
+                new Models.SCustomer { SCustoTel="18945984563",SCustoName="啊三" },
+                new Models.SCustomer { SCustoTel="48956845951",SCustoName="阿不" },
+                new Models.SCustomer { SCustoTel="48945674263",SCustoName="鸡汁" }
+            };
+            SCustomers.ForEach(s => context.SCustomers.Add(s));
+            context.SaveChanges();
 
             ////订单管理表
             //var Orders = new List<Models.Order>

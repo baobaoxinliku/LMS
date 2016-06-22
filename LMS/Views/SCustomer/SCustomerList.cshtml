@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/MyLayout.cshtml";
 }
 @section TitleSection{
-    CarList
+    SCustomerList
 }
 @section HeaderSection{
 
@@ -13,48 +13,47 @@
         <div id="content-header">
             <div id="breadcrumb">
                 <a href="#" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>
-                <a href="#">车辆情况</a>
-                <a href="#" class="current">车辆列表</a>
+                <a href="#">客户情况</a>
+                <a href="#">收货人信息</a>
+                <a href="#" class="current">发货人列表</a>
             </div>
-            <h1>车辆信息表</h1><hr />
+            <h1>用户列表</h1><hr />
         </div>
         <div class="container">
             @using (Html.BeginForm())
             {
                 <p>
-                    请输入您要搜索的驾驶员姓名 ： @Html.TextBox("Search")
+                    请输入您要搜索的姓名 ： @Html.TextBox("Search")
                     <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
-                </p>
+                    </p>
             }
             <div class="widget-box">
                 <div class="widget-title">
                     <span class="icon"><i class="icon-th"></i></span>
-                    <h5>车辆列表</h5>
+                    <h5>收货人信息表</h5>
                 </div>
                 <div class="widget-content nopadding">
                     <table class="table table-bordered data-table">
                         <thead>
                             <tr>
-                                <th>编号</th>
-                                <th>车牌号</th>
-                                <th>驾驶员</th>
-                                <th>车类型</th>
+                                <th>收货人编号</th>
+                                <th>收货人姓名</th>
+                                <th>收货人电话</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (LMS.Models.Car item in Model.Car)
+                            @foreach (LMS.Models.SCustomer item in Model.SCustomer)
                             {
                                 <tr>
-                                    <td>@item.CarID</td>
-                                    <td>@item.CarNo</td>
-                                    <td>@item.CarDiver</td>
-                                    <td>@item.CarType</td>
-                                    <td>@Html.ActionLink("详情", "CarDetail", new { id = item.CarID })</td>
-                                    <td>@Html.ActionLink("编辑", "CarEdit", new { id = item.CarID })</td>
-                                    <td>@Html.ActionLink("删除", "CarDelete", new { id = item.CarID })</td>
+                                    <td>@item.SCustoID</td>
+                                    <td>@item.SCustoName</td>
+                                    <td>@item.SCustoTel</td>
+                                    <td>@Html.ActionLink("详情", "SCustomerDetail", new { id = item.SCustoID })</td>
+                                    <td>@Html.ActionLink("编辑", "SCustomerEdit", new { id = item.SCustoID })</td>
+                                    <td>@Html.ActionLink("删除", "SCustomerDelete", new { id = item.SCustoID })</td>
                                 </tr>
                             }
                         </tbody>

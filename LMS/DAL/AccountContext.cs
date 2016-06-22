@@ -17,7 +17,7 @@ namespace LMS.DAL
 
         public DbSet<Models.FCustomer> FCustomers { get; set; }
 
-        public DbSet<Models.S_Customer> S_Customers { get; set; }
+        public DbSet<Models.SCustomer> SCustomers { get; set; }
 
         //public DbSet<Models.Classs> Classss { get; set; }
 
