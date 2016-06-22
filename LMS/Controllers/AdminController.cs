@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,11 +14,6 @@ namespace LMS.Controllers
         // GET: Admin
 
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult IndexAdmin()
         {
             return View();
         }
@@ -57,5 +53,66 @@ namespace LMS.Controllers
             }
         }
 
+        public ActionResult Car()
+        {
+            return View();
+        }
+        public ActionResult Line()
+        {
+            return View();
+        }
+
+        //用户列表
+        public ActionResult AdminList(string Search)
+        {
+            List<Models.Admin> Admins;
+            if (!string.IsNullOrEmpty(Search))
+            {
+                Admins = db.Admins.Where(u => u.AdminName.Contains(Search)).ToList();
+            }
+            else
+            {
+                Admins = db.Admins.ToList();
+            }
+            ViewModels.AccountListViewModel aLVM = new ViewModels.AccountListViewModel();
+            aLVM.Admin = Admins;
+            return View(aLVM);
+        }
+
+        //用户详情
+        public ActionResult AdminDetail(int ? id)
+        {
+            Models.Admin acc = db.Admins.Find(id);
+            return View(acc);
+        }
+
+        //删除用户
+        public ActionResult AdminDelete(int id)
+        {
+            Models.Admin acc = db.Admins.Find(id);
+            return View(acc);
+        }
+        [HttpPost, ActionName("AdminDelete")]
+        public ActionResult AdminDeleteConfirmed(int id)
+        {
+            Models.Admin acc = db.Admins.Find(id);
+            db.Admins.Remove(acc);
+            db.SaveChanges();
+            return RedirectToAction("AdminList");
+        }
+
+        //修改用户
+        public ActionResult AdminEdit(int id)
+        {
+            Models.Admin acc = db.Admins.Find(id);
+            return View(acc);
+        }
+        [HttpPost]
+        public ActionResult AdminEdit(Models.Admin acc)
+        {
+            db.Entry(acc).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("AdminList");
+        }
     }
 }
