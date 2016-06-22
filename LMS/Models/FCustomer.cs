@@ -6,13 +6,13 @@ using System.Web;
 
 namespace LMS.Models
 {
-    public class F_Customer
+    public class FCustomer
     {
         [Key]
-        public int F_CustoID { get; set; }
+        public int FCustoID { get; set; }
 
-        public string F_CustoTel { get; set; }
+        public string FCustoTel { get; set; }
 
-        public string F_CustoName { get; set; }
+        public string FCustoName { get; set; }
     }
 }

@@ -230,6 +230,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CarController.cs" />
+    <Compile Include="Controllers\FCustomerController.cs" />
     <Compile Include="DAL\AccountContext.cs" />
     <Compile Include="DAL\AccountInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -238,7 +239,7 @@
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Class.cs" />
-    <Compile Include="Models\F_Customer.cs" />
+    <Compile Include="Models\FCustomer.cs" />
     <Compile Include="Models\Line.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\S_Customer.cs" />
@@ -283,6 +284,12 @@
     <Content Include="Views\Car\CarIndex.cshtml" />
     <Content Include="Views\Car\CarEdit.cshtml" />
     <Content Include="Views\Car\CarAdd.cshtml" />
+    <Content Include="Views\FCustomer\FCustomerIndex.cshtml" />
+    <Content Include="Views\FCustomer\FCustomerAdd.cshtml" />
+    <Content Include="Views\FCustomer\FCustomerList.cshtml" />
+    <Content Include="Views\FCustomer\FCustomerDetail.cshtml" />
+    <Content Include="Views\FCustomer\FCustomerDelete.cshtml" />
+    <Content Include="Views\FCustomer\FCustomerEdit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

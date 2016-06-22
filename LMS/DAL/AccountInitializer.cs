@@ -50,17 +50,17 @@ namespace LMS.DAL
             //context.SaveChanges();
 
             //发货人
-            //var F_Customers = new List<Models.F_Customer>
-            //{
-            //    //INSERT[F_Customer]([F_CustoNo],[F_CustoTel],[F_CustoName])
-            //    new Models.F_Customer{ F_CustoTel="13611111111",F_CustoName="黄先生" },
-            //    new Models.F_Customer{ F_CustoTel="13622222222",F_CustoName="孙先生" },
-            //    new Models.F_Customer{ F_CustoTel="13633333333",F_CustoName="罗先生" },
-            //    new Models.F_Customer{ F_CustoTel="13644444444",F_CustoName="王先生" },
-            //    new Models.F_Customer{ F_CustoTel="13655555555",F_CustoName="张先生" }
-            //};
-            //F_Customers.ForEach(s => context.F_Customers.Add(s));
-            //context.SaveChanges();
+            var FCustomers = new List<Models.FCustomer>
+            {
+                //INSERT[F_Customer]([F_CustoNo],[F_CustoTel],[F_CustoName])
+                new Models.FCustomer{ FCustoTel="13611111111",FCustoName="黄先生" },
+                new Models.FCustomer{ FCustoTel="13622222222",FCustoName="孙先生" },
+                new Models.FCustomer{ FCustoTel="13633333333",FCustoName="罗先生" },
+                new Models.FCustomer{ FCustoTel="13644444444",FCustoName="王先生" },
+                new Models.FCustomer{ FCustoTel="13655555555",FCustoName="张先生" }
+            };
+            FCustomers.ForEach(s => context.FCustomers.Add(s));
+            context.SaveChanges();
 
             ////路线信息表
             //var Lines = new List<Models.Line>

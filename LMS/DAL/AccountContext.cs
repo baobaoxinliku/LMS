@@ -15,7 +15,7 @@ namespace LMS.DAL
 
         public DbSet<Models.Car> Cars { get; set; }
 
-        public DbSet<Models.F_Customer> F_Customers { get; set; }
+        public DbSet<Models.FCustomer> FCustomers { get; set; }
 
         public DbSet<Models.S_Customer> S_Customers { get; set; }
 

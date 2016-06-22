@@ -1,0 +1,53 @@
+﻿@model LMS.Models.FCustomer
+@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+@section TitleSection{
+    FCustomerDelete
+}
+@section HeaderSection{
+
+}
+@section ContentBody{
+    <div id="sidebar">
+        <ul>
+            <li><a href="Index"><i class="icon icon-home"></i>首页</a></li>
+            <li><a href="#">订单管理</a></li>
+            <li><a href="#">线路详情</a></li>
+            <li><a href="#">车辆情况</a></li>
+            <li class="active"><a href="#">用户管理</a></li>
+            <li><a href="Login">退出</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="content-header">
+            <div id="breadcrumb">
+                <a href="Index" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>
+                <a href="#">用户管理</a>
+                <a href="AdminList" class="current">用户列表</a>
+            </div>
+            <h1>用户列表</h1><hr />
+        </div>
+        <div class="body-content container">
+            <h2>确定删除以下信息吗？</h2>
+            <dl>
+                <dt>发货人编号：</dt>
+                <dd>@Html.DisplayFor(model => model.FCustoID)</dd>
+
+                <dt><br />发货人姓名：</dt>
+                <dd>@Html.DisplayFor(model => model.FCustoTel)</dd>
+
+                <dt><br />发货人电话：</dt>
+                <dd>@Html.DisplayFor(model => model.FCustoName)</dd>
+            </dl>
+            @using (Html.BeginForm())
+            {
+                <div>
+                    <input type="submit" value="删除" class="btn btn-default" />
+                    @Html.ActionLink("返回首页", "FCustomerList")
+                </div>
+            }
+        </div>
+    </div>
+}
+

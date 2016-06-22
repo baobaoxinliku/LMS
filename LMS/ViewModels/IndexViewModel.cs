@@ -13,7 +13,7 @@ namespace LMS.ViewModels
 
         //public List<Models.Classs> Classss { get; set; }
 
-        public List<Models.F_Customer> F_Customers { get; set; }
+        public List<Models.FCustomer> F_Customers { get; set; }
 
         //public List<Models.Line> Lines { get; set; }
 
