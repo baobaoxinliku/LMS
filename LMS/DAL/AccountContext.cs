@@ -21,7 +21,7 @@ namespace LMS.DAL
 
         //public DbSet<Models.Classs> Classss { get; set; }
 
-        //public DbSet<Models.Line> Lines { get; set; }
+        public DbSet<Models.Line> Lines { get; set; }
 
         //public DbSet<Models.Order> Orders { get; set; }
 

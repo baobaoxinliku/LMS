@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+@section TitleSection{
+    LineAdd
+}
+@section HeaderSection{
+
+}
+@section ContentBody{
+    <div id="content">
+        <div id="content-header">
+            <div id="breadcrumb">
+                <a href="#" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>
+                <a href="#">路线详情</a>
+                <a href="#" class="current">添加路线</a>
+            </div>
+            <h1>添加路线</h1>
+        </div>
+        <div class="container-fluid">
+            <hr>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="widget-box">
+                        <div class="widget-title">
+                            <span class="icon"> <i class="icon-align-justify"></i> </span>
+                            <h5>添加信息</h5>
+                        </div>
+
+                        <div class="widget-content nopadding">
+                            <form action="/Line/LineAdd" method="post" class="form-horizontal">
+                                <div class="control-group">
+                                    <label class="control-label">起始站 :</label>
+                                    <div class="controls">
+                                        <input type="text" class="span11" placeholder="请输入起始站" name="Start" />
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">中转站 :</label>
+                                    <div class="controls">
+                                        <input type="text" class="span11" placeholder="请输入中转站" name="Lines" />
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">目的地 :</label>
+                                    <div class="controls">
+                                        <input type="text" class="span11" placeholder="请输入目的地" name="End" />
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">路线长度 :</label>
+                                    <div class="controls">
+                                        <input type="text" class="span11" placeholder="请输入路线长度" name="LineLength" />
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-success">添加</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

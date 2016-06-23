@@ -30,5 +30,7 @@ namespace LMS.Models
 
         [DisplayName("管理员简介")]
         public string AdminIntro { get; set; }
+
+        //public virtual ICollection<Order> Orders { get; set; }
     }
 }

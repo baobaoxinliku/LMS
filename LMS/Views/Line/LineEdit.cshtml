@@ -1,0 +1,50 @@
+﻿@model LMS.Models.Line
+@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+@section TitleSection{
+    LineEdit
+}
+@section HeaderSection{
+
+}
+@section ContentBody{
+    <div id="content">
+        <div id="content-header">
+            <div id="breadcrumb">
+                <a href="#" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>
+                <a href="#">路线详情</a>
+                <a href="#">路线列表</a>
+                <a href="#" class="current">编辑</a>
+            </div>
+            <h1>编辑</h1><hr />
+        </div>
+        <div class="container">
+            <h2>编辑</h2>
+            @using (Html.BeginForm())
+            {
+                @Html.HiddenFor(model => model.LineID)
+                <dl>
+                    <dt>路线编号：</dt>
+                    <dd>@Html.DisplayFor(model => model.LineID)</dd>
+
+                    <dt><br />起始站：</dt>
+                    <dd>@Html.EditorFor(model => model.Start)</dd>
+
+                    <dt><br />中转站：</dt>
+                    <dd>@Html.EditorFor(model => model.Lines)</dd>
+
+                    <dt><br />目的地：</dt>
+                    <dd>@Html.EditorFor(model => model.End)</dd>
+
+                    <dt><br />路线长度：</dt>
+                    <dd>@Html.EditorFor(model => model.LineLength)</dd>
+                </dl>
+                <div>
+                    <input type="submit" value="保存" class="btn btn-default" />@Html.ActionLink("返回首页", "LineList")
+                </div>
+            }
+        </div>
+    </div>
+}
+

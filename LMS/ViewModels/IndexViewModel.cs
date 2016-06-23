@@ -15,7 +15,7 @@ namespace LMS.ViewModels
 
         public List<Models.FCustomer> FCustomers { get; set; }
 
-        //public List<Models.Line> Lines { get; set; }
+        public List<Models.Line> Lines { get; set; }
 
         //public List<Models.Order> Orders { get; set; }
 

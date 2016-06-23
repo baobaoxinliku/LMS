@@ -28,5 +28,7 @@ namespace LMS.Models
         [DisplayName("车辆类型")]
         [Required(ErrorMessage = "请输入车辆类型")]
         public string CarType { get; set; }
+
+        //public virtual ICollection<Order> Orders { get; set; }
     }
 }

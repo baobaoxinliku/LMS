@@ -62,18 +62,18 @@ namespace LMS.DAL
             FCustomers.ForEach(s => context.FCustomers.Add(s));
             context.SaveChanges();
 
-            ////路线信息表
-            //var Lines = new List<Models.Line>
-            //{
-            //    //INSERT[line]([LineID],[LineLength],[Start],[Line],[End])
-            //    new Models.Line { LineID=701,LineLength=50,Start="中山", Lines="没有",End="佛山" },
-            //    new Models.Line { LineID=702,LineLength=120,Start="茂名",Lines="广州",End="深圳" },
-            //    new Models.Line { LineID=703,LineLength=200,Start="韶关",Lines="广州",End="东莞" },
-            //    new Models.Line { LineID=704,LineLength=120,Start="深圳",Lines="梅州",End="汕尾" },
-            //    new Models.Line { LineID=705,LineLength=250,Start="广州",Lines="河源",End="汕头" }
-            //};
-            //Lines.ForEach(s => context.Lines.Add(s));
-            //context.SaveChanges();
+            //路线信息表
+            var Lines = new List<Models.Line>
+            {
+                //INSERT[line]([LineID],[LineLength],[Start],[Line],[End])
+                new Models.Line { LineLength=50,Start="中山", Lines="没有",End="佛山" },
+                new Models.Line { LineLength=120,Start="茂名",Lines="广州",End="深圳" },
+                new Models.Line { LineLength=200,Start="韶关",Lines="广州",End="东莞" },
+                new Models.Line { LineLength=120,Start="深圳",Lines="梅州",End="汕尾" },
+                new Models.Line { LineLength=250,Start="广州",Lines="河源",End="汕头" }
+            };
+            Lines.ForEach(s => context.Lines.Add(s));
+            context.SaveChanges();
 
             //收货人
             var SCustomers = new List<Models.SCustomer>

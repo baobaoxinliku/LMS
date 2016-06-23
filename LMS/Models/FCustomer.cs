@@ -14,5 +14,7 @@ namespace LMS.Models
         public string FCustoTel { get; set; }
 
         public string FCustoName { get; set; }
+
+        //public virtual ICollection<Order> Orders { get; set; }
     }
 }

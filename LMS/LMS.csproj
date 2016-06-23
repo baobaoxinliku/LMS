@@ -224,13 +224,16 @@
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="scripts\select2.min.js" />
     <Content Include="scripts\wysihtml5-0.3.0.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\FCustomerController.cs" />
+    <Compile Include="Controllers\LineController.cs" />
     <Compile Include="Controllers\SCustomerController.cs" />
     <Compile Include="DAL\AccountContext.cs" />
     <Compile Include="DAL\AccountInitializer.cs" />
@@ -301,6 +304,12 @@
     <Content Include="Views\Car\CarList1.cshtml" />
     <Content Include="Views\SCustomer\SCustomerList1.cshtml" />
     <Content Include="Views\FCustomer\FCustomerList1.cshtml" />
+    <Content Include="Views\Line\LineAdd.cshtml" />
+    <Content Include="Views\Line\LineList.cshtml" />
+    <Content Include="Views\Line\LineList1.cshtml" />
+    <Content Include="Views\Line\LineDetail.cshtml" />
+    <Content Include="Views\Line\LineDelete.cshtml" />
+    <Content Include="Views\Line\LineEdit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

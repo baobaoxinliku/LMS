@@ -1,0 +1,45 @@
+﻿@model LMS.Models.Line
+@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+@section TitleSection{
+    LineDetail
+}
+@section HeaderSection{
+
+}
+@section ContentBody{
+    <div id="content">
+        <div id="content-header">
+            <div id="breadcrumb">
+                <a href="#" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>
+                <a href="#">路线详情</a>
+                <a href="#">路线列表</a>
+                <a href="#" class="current">详情</a>
+            </div>
+            <h1>用户信息</h1><hr />
+        </div>
+        <div class="body-content container">
+            <dl>
+                <dt>路线编号：</dt>
+                <dd>@Html.DisplayFor(model => model.LineID)</dd>
+
+                <dt><br />起始站：</dt>
+                <dd>@Html.DisplayFor(model => model.Start)</dd>
+
+                <dt><br />中转站：</dt>
+                <dd>@Html.DisplayFor(model => model.Lines)</dd>
+
+                <dt><br />目的地：</dt>
+                <dd>@Html.DisplayFor(model => model.End)</dd>
+
+                <dt><br />路线长度：</dt>
+                <dd>@Html.DisplayFor(model => model.LineLength)</dd>
+            </dl>
+            <div>
+                @Html.ActionLink("返回首页", "LineList")
+            </div>
+        </div>
+    </div>
+}
+
